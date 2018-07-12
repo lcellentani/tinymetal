@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		332C25FE20F7DA3000DA784D /* Renderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 332C25FC20F7DA3000DA784D /* Renderer.mm */; };
+		332C260520F7E6DF00DA784D /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 332C260420F7E6DF00DA784D /* Shaders.metal */; };
+		332C260820F7E74900DA784D /* MathUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 332C260620F7E74900DA784D /* MathUtils.mm */; };
 		33C6077720F7A0CB00E7639D /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C6077620F7A0CB00E7639D /* MetalKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		33C6077920F7A0CF00E7639D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C6077820F7A0CF00E7639D /* Metal.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		33C6077B20F7A0E000E7639D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C6077A20F7A0E000E7639D /* QuartzCore.framework */; };
@@ -20,6 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		332C25FC20F7DA3000DA784D /* Renderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Renderer.mm; sourceTree = "<group>"; };
+		332C25FD20F7DA3000DA784D /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		332C25FF20F7E20000DA784D /* GraphicsTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicsTypes.h; sourceTree = "<group>"; };
+		332C260420F7E6DF00DA784D /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		332C260620F7E74900DA784D /* MathUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MathUtils.mm; sourceTree = "<group>"; };
+		332C260720F7E74900DA784D /* MathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathUtils.h; sourceTree = "<group>"; };
 		3397991120F79D94006A2E39 /* tinymetal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tinymetal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C6076320F7A03B00E7639D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33C6077620F7A0CB00E7639D /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
@@ -51,9 +60,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		332C260120F7E64900DA784D /* Media */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Media;
+			path = ../media;
+			sourceTree = "<group>";
+		};
 		3397990820F79D94006A2E39 = {
 			isa = PBXGroup;
 			children = (
+				332C260120F7E64900DA784D /* Media */,
 				33C6076220F7A01000E7639D /* Sources */,
 				33C6076020F79F6900E7639D /* System */,
 				3397991220F79D94006A2E39 /* Products */,
@@ -83,6 +101,12 @@
 		33C6076220F7A01000E7639D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				332C260720F7E74900DA784D /* MathUtils.h */,
+				332C260620F7E74900DA784D /* MathUtils.mm */,
+				332C260420F7E6DF00DA784D /* Shaders.metal */,
+				332C25FF20F7E20000DA784D /* GraphicsTypes.h */,
+				332C25FD20F7DA3000DA784D /* Renderer.h */,
+				332C25FC20F7DA3000DA784D /* Renderer.mm */,
 				33C6078220F7A12200E7639D /* GameViewController.h */,
 				33C6078120F7A12200E7639D /* GameViewController.mm */,
 				33C6077D20F7A0EB00E7639D /* AppDelegate.h */,
@@ -174,8 +198,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				33C6078020F7A0EB00E7639D /* AppDelegate.mm in Sources */,
+				332C260520F7E6DF00DA784D /* Shaders.metal in Sources */,
 				33C6077F20F7A0EB00E7639D /* main.mm in Sources */,
+				332C25FE20F7DA3000DA784D /* Renderer.mm in Sources */,
 				33C6078320F7A12200E7639D /* GameViewController.mm in Sources */,
+				332C260820F7E74900DA784D /* MathUtils.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
