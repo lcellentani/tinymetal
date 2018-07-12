@@ -1,28 +1,31 @@
 #include <metal_stdlib>
 using namespace metal;
 
-#include "GraphicsTypes.h"
-
 struct VertexIn {
-    float4 position;
-    float4 color;
+    float4 a_position [[attribute(0)]];
+    half4 a_color [[attribute(1)]];
 };
 
 struct VertexOut {
-    float4 position [[position]];
-    half4 color;
+    float4 gl_Position [[position]];
+    half4 v_color;
 };
 
-vertex VertexOut main_vs(device VertexIn* vertices[[buffer(0)]],
-                      constant SharedData* sharedData[[buffer(1)]],
-                      uint vid [[vertex_id]]) {
-    VertexOut vertexOut;
-    vertexOut.position = sharedData->modelViewProjection * vertices[vid].position;
-    vertexOut.color = (half4)vertices[vid].color;
+struct SharedData {
+    unsigned int u_frameIndex;
+    float u_time;
+    float4x4 u_modelViewProjection;
+};
+
+vertex VertexOut main_vs(VertexIn vin[[stage_in]],
+                      constant SharedData& sharedData[[buffer(1)]]) {
+    VertexOut vout;
+    vout.gl_Position = sharedData.u_modelViewProjection * vin.a_position;
+    vout.v_color = vin.a_color;
     
-    return vertexOut;
+    return vout;
 }
 
-fragment half4 main_fs(VertexOut vertexIn [[stage_in]]) {
-    return half4(vertexIn.color);
+fragment half4 main_fs(VertexOut vout[[stage_in]]) {
+    return vout.v_color;
 }

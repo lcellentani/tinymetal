@@ -70,9 +70,20 @@ static const NSUInteger cMaxBuffersInFlight = 3;
     
     id<MTLLibrary> library = [_device newDefaultLibrary];
     
+    MTLVertexDescriptor *vertexDescriptor = [MTLVertexDescriptor vertexDescriptor];
+    vertexDescriptor.attributes[0].format = MTLVertexFormatFloat4;
+    vertexDescriptor.attributes[0].bufferIndex = 0;
+    vertexDescriptor.attributes[0].offset = 0;
+    vertexDescriptor.attributes[1].format = MTLVertexFormatFloat4;
+    vertexDescriptor.attributes[1].bufferIndex = 0;
+    vertexDescriptor.attributes[1].offset = sizeof(float) * 4;
+    vertexDescriptor.layouts[0].stride = sizeof(float) * 8;
+    vertexDescriptor.layouts[0].stepFunction = MTLVertexStepFunctionPerVertex;
+    
     MTLRenderPipelineDescriptor *pipelineDescriptor = [MTLRenderPipelineDescriptor new];
     pipelineDescriptor.vertexFunction = [library newFunctionWithName:@"main_vs"];
     pipelineDescriptor.fragmentFunction = [library newFunctionWithName:@"main_fs"];
+    pipelineDescriptor.vertexDescriptor = vertexDescriptor;
     pipelineDescriptor.colorAttachments[0].pixelFormat = MTLPixelFormatBGRA8Unorm;
     pipelineDescriptor.depthAttachmentPixelFormat = MTLPixelFormatDepth32Float;
     
@@ -97,6 +108,7 @@ static const NSUInteger cMaxBuffersInFlight = 3;
         { .position = {  1, -1, -1, 1 }, .color = { 1, 0, 0, 1 } },
         { .position = {  1,  1, -1, 1 }, .color = { 1, 1, 0, 1 } }
     };
+    static const uint32_t verticesCount = sizeof(vertices) / sizeof(Vertex);
     
     static const uint16_t indices[] =
     {
@@ -107,8 +119,8 @@ static const NSUInteger cMaxBuffersInFlight = 3;
         0, 1, 2, 2, 3, 0,
         7, 6, 5, 5, 4, 7
     };
-    
-    _vertexBuffer = [_device newBufferWithBytes:vertices length:sizeof(vertices) options:MTLResourceOptionCPUCacheModeDefault];
+
+    _vertexBuffer = [_device newBufferWithBytes:vertices length:sizeof(vertices) * verticesCount options:MTLResourceOptionCPUCacheModeDefault];
     [_vertexBuffer setLabel:@"Vertices"];
     
     _indexBuffer = [_device newBufferWithBytes:indices length:sizeof(indices) options:MTLResourceOptionCPUCacheModeDefault];
@@ -140,9 +152,9 @@ static const NSUInteger cMaxBuffersInFlight = 3;
     const matrix_float4x4 projectionMatrix = matrix_float4x4_perspective(aspect, fov, near, far);
     
     SharedData data;
-    data.frameIndex = _frameIndex;
-    data.time = elapsed;
-    data.modelViewProjection = matrix_multiply(projectionMatrix, matrix_multiply(viewMatrix, modelMatrix));
+    data.u_frameIndex = _frameIndex;
+    data.u_time = elapsed;
+    data.u_modelViewProjection = matrix_multiply(projectionMatrix, matrix_multiply(viewMatrix, modelMatrix));
     
     id<MTLBuffer> sharedDataBuffer = _perFrameData[_frameIndex % cMaxBuffersInFlight].sharedData;
     memcpy([sharedDataBuffer contents], &data, sizeof(SharedData));

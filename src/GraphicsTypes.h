@@ -3,14 +3,14 @@
 #import <simd/simd.h>
 
 typedef struct {
-    vector_float4 position;
-    vector_float4 color;
+    simd::float4 position;
+    simd::float4 color;
 } Vertex;
 
 struct SharedData
 {
-    unsigned int frameIndex;
-    float time;
+    unsigned int u_frameIndex;
+    float u_time;
     
-    matrix_float4x4 modelViewProjection;
+    matrix_float4x4 u_modelViewProjection;
 };
