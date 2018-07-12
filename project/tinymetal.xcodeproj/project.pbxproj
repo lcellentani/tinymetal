@@ -1,0 +1,355 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		33C6077720F7A0CB00E7639D /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C6077620F7A0CB00E7639D /* MetalKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		33C6077920F7A0CF00E7639D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C6077820F7A0CF00E7639D /* Metal.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		33C6077B20F7A0E000E7639D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C6077A20F7A0E000E7639D /* QuartzCore.framework */; };
+		33C6077F20F7A0EB00E7639D /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C6077C20F7A0EB00E7639D /* main.mm */; };
+		33C6078020F7A0EB00E7639D /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C6077E20F7A0EB00E7639D /* AppDelegate.mm */; };
+		33C6078320F7A12200E7639D /* GameViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C6078120F7A12200E7639D /* GameViewController.mm */; };
+		33C6078520F7A1AF00E7639D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C6078420F7A1AF00E7639D /* UIKit.framework */; };
+		8A781B4620F7B45C0077E3E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A781B4420F7B45C0077E3E9 /* Main.storyboard */; };
+		8A781B4720F7B45C0077E3E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A781B4520F7B45C0077E3E9 /* LaunchScreen.storyboard */; };
+		8A781B4920F7B9500077E3E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A781B4820F7B9500077E3E9 /* Images.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3397991120F79D94006A2E39 /* tinymetal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tinymetal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33C6076320F7A03B00E7639D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33C6077620F7A0CB00E7639D /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		33C6077820F7A0CF00E7639D /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		33C6077A20F7A0E000E7639D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		33C6077C20F7A0EB00E7639D /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		33C6077D20F7A0EB00E7639D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		33C6077E20F7A0EB00E7639D /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		33C6078120F7A12200E7639D /* GameViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameViewController.mm; sourceTree = "<group>"; };
+		33C6078220F7A12200E7639D /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		33C6078420F7A1AF00E7639D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8A781B4420F7B45C0077E3E9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8A781B4520F7B45C0077E3E9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A781B4820F7B9500077E3E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3397990E20F79D94006A2E39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33C6078520F7A1AF00E7639D /* UIKit.framework in Frameworks */,
+				33C6077B20F7A0E000E7639D /* QuartzCore.framework in Frameworks */,
+				33C6077920F7A0CF00E7639D /* Metal.framework in Frameworks */,
+				33C6077720F7A0CB00E7639D /* MetalKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3397990820F79D94006A2E39 = {
+			isa = PBXGroup;
+			children = (
+				33C6076220F7A01000E7639D /* Sources */,
+				33C6076020F79F6900E7639D /* System */,
+				3397991220F79D94006A2E39 /* Products */,
+				33C6077520F7A0CA00E7639D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3397991220F79D94006A2E39 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3397991120F79D94006A2E39 /* tinymetal.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33C6076020F79F6900E7639D /* System */ = {
+			isa = PBXGroup;
+			children = (
+				8A781B4820F7B9500077E3E9 /* Images.xcassets */,
+				8A781B4520F7B45C0077E3E9 /* LaunchScreen.storyboard */,
+				8A781B4420F7B45C0077E3E9 /* Main.storyboard */,
+				33C6076320F7A03B00E7639D /* Info.plist */,
+			);
+			name = System;
+			sourceTree = "<group>";
+		};
+		33C6076220F7A01000E7639D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				33C6078220F7A12200E7639D /* GameViewController.h */,
+				33C6078120F7A12200E7639D /* GameViewController.mm */,
+				33C6077D20F7A0EB00E7639D /* AppDelegate.h */,
+				33C6077E20F7A0EB00E7639D /* AppDelegate.mm */,
+				33C6077C20F7A0EB00E7639D /* main.mm */,
+			);
+			name = Sources;
+			path = ../src;
+			sourceTree = "<group>";
+		};
+		33C6077520F7A0CA00E7639D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33C6078420F7A1AF00E7639D /* UIKit.framework */,
+				33C6077A20F7A0E000E7639D /* QuartzCore.framework */,
+				33C6077820F7A0CF00E7639D /* Metal.framework */,
+				33C6077620F7A0CB00E7639D /* MetalKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3397991020F79D94006A2E39 /* tinymetal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3397992720F79D96006A2E39 /* Build configuration list for PBXNativeTarget "tinymetal" */;
+			buildPhases = (
+				3397990D20F79D94006A2E39 /* Sources */,
+				3397990E20F79D94006A2E39 /* Frameworks */,
+				3397990F20F79D94006A2E39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tinymetal;
+			productName = tinymetal;
+			productReference = 3397991120F79D94006A2E39 /* tinymetal.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3397990920F79D94006A2E39 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				TargetAttributes = {
+					3397991020F79D94006A2E39 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+				};
+			};
+			buildConfigurationList = 3397990C20F79D94006A2E39 /* Build configuration list for PBXProject "tinymetal" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3397990820F79D94006A2E39;
+			productRefGroup = 3397991220F79D94006A2E39 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3397991020F79D94006A2E39 /* tinymetal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3397990F20F79D94006A2E39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A781B4920F7B9500077E3E9 /* Images.xcassets in Resources */,
+				8A781B4620F7B45C0077E3E9 /* Main.storyboard in Resources */,
+				8A781B4720F7B45C0077E3E9 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3397990D20F79D94006A2E39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33C6078020F7A0EB00E7639D /* AppDelegate.mm in Sources */,
+				33C6077F20F7A0EB00E7639D /* main.mm in Sources */,
+				33C6078320F7A12200E7639D /* GameViewController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3397992520F79D96006A2E39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3397992620F79D96006A2E39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3397992820F79D96006A2E39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 678TP86R4P;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = woot.tinymetal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3397992920F79D96006A2E39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 678TP86R4P;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = woot.tinymetal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3397990C20F79D94006A2E39 /* Build configuration list for PBXProject "tinymetal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3397992520F79D96006A2E39 /* Debug */,
+				3397992620F79D96006A2E39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3397992720F79D96006A2E39 /* Build configuration list for PBXNativeTarget "tinymetal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3397992820F79D96006A2E39 /* Debug */,
+				3397992920F79D96006A2E39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3397990920F79D94006A2E39 /* Project object */;
+}
