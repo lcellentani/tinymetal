@@ -67,3 +67,11 @@ matrix_float4x4 matrix_float4x4_perspective(float aspect, float fovy, float near
     matrix_float4x4 mat = { P, Q, R, S };
     return mat;
 }
+
+matrix_float3x3 matrix_float4x4_extract_linear(matrix_float4x4 m) {
+    vector_float3 X = m.columns[0].xyz;
+    vector_float3 Y = m.columns[1].xyz;
+    vector_float3 Z = m.columns[2].xyz;
+    matrix_float3x3 l = { X, Y, Z };
+    return l;
+}

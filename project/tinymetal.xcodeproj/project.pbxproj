@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330D623120FA18B1003C8F42 /* ObjMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 330D622E20FA18B1003C8F42 /* ObjMesh.mm */; };
+		330D623220FA18B1003C8F42 /* Mesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 330D622F20FA18B1003C8F42 /* Mesh.mm */; };
+		330D623420FA1947003C8F42 /* teapot.obj in Resources */ = {isa = PBXBuildFile; fileRef = 330D623320FA1947003C8F42 /* teapot.obj */; };
+		330D623620FA5209003C8F42 /* monkey.obj in Resources */ = {isa = PBXBuildFile; fileRef = 330D623520FA5208003C8F42 /* monkey.obj */; };
+		331C5E7F20F8E6E90020A981 /* ObjModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 331C5E7D20F8E6E90020A981 /* ObjModel.mm */; };
+		331C5E8020F8E6E90020A981 /* ObjGroup.mm in Sources */ = {isa = PBXBuildFile; fileRef = 331C5E7E20F8E6E90020A981 /* ObjGroup.mm */; };
 		332C25FE20F7DA3000DA784D /* Renderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 332C25FC20F7DA3000DA784D /* Renderer.mm */; };
 		332C260520F7E6DF00DA784D /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 332C260420F7E6DF00DA784D /* Shaders.metal */; };
 		332C260820F7E74900DA784D /* MathUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 332C260620F7E74900DA784D /* MathUtils.mm */; };
-		33C6077720F7A0CB00E7639D /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C6077620F7A0CB00E7639D /* MetalKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		33C6077920F7A0CF00E7639D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C6077820F7A0CF00E7639D /* Metal.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		33C6077720F7A0CB00E7639D /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C6077620F7A0CB00E7639D /* MetalKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		33C6077920F7A0CF00E7639D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C6077820F7A0CF00E7639D /* Metal.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		33C6077B20F7A0E000E7639D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C6077A20F7A0E000E7639D /* QuartzCore.framework */; };
 		33C6077F20F7A0EB00E7639D /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C6077C20F7A0EB00E7639D /* main.mm */; };
 		33C6078020F7A0EB00E7639D /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C6077E20F7A0EB00E7639D /* AppDelegate.mm */; };
@@ -23,6 +29,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		330D622920FA14BF003C8F42 /* ObjMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjMesh.h; sourceTree = "<group>"; };
+		330D622E20FA18B1003C8F42 /* ObjMesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjMesh.mm; sourceTree = "<group>"; };
+		330D622F20FA18B1003C8F42 /* Mesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Mesh.mm; sourceTree = "<group>"; };
+		330D623020FA18B1003C8F42 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
+		330D623320FA1947003C8F42 /* teapot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = teapot.obj; sourceTree = "<group>"; };
+		330D623520FA5208003C8F42 /* monkey.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = monkey.obj; sourceTree = "<group>"; };
+		331C5E7A20F8E54D0020A981 /* ObjModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjModel.h; sourceTree = "<group>"; };
+		331C5E7C20F8E54D0020A981 /* ObjGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjGroup.h; sourceTree = "<group>"; };
+		331C5E7D20F8E6E90020A981 /* ObjModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjModel.mm; sourceTree = "<group>"; };
+		331C5E7E20F8E6E90020A981 /* ObjGroup.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjGroup.mm; sourceTree = "<group>"; };
 		332C25FC20F7DA3000DA784D /* Renderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Renderer.mm; sourceTree = "<group>"; };
 		332C25FD20F7DA3000DA784D /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
 		332C25FF20F7E20000DA784D /* GraphicsTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicsTypes.h; sourceTree = "<group>"; };
@@ -63,6 +79,8 @@
 		332C260120F7E64900DA784D /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				330D623520FA5208003C8F42 /* monkey.obj */,
+				330D623320FA1947003C8F42 /* teapot.obj */,
 			);
 			name = Media;
 			path = ../media;
@@ -101,6 +119,14 @@
 		33C6076220F7A01000E7639D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				330D623020FA18B1003C8F42 /* Mesh.h */,
+				330D622F20FA18B1003C8F42 /* Mesh.mm */,
+				330D622920FA14BF003C8F42 /* ObjMesh.h */,
+				330D622E20FA18B1003C8F42 /* ObjMesh.mm */,
+				331C5E7A20F8E54D0020A981 /* ObjModel.h */,
+				331C5E7D20F8E6E90020A981 /* ObjModel.mm */,
+				331C5E7C20F8E54D0020A981 /* ObjGroup.h */,
+				331C5E7E20F8E6E90020A981 /* ObjGroup.mm */,
 				332C260720F7E74900DA784D /* MathUtils.h */,
 				332C260620F7E74900DA784D /* MathUtils.mm */,
 				332C260420F7E6DF00DA784D /* Shaders.metal */,
@@ -184,7 +210,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				330D623420FA1947003C8F42 /* teapot.obj in Resources */,
 				8A781B4920F7B9500077E3E9 /* Images.xcassets in Resources */,
+				330D623620FA5209003C8F42 /* monkey.obj in Resources */,
 				8A781B4620F7B45C0077E3E9 /* Main.storyboard in Resources */,
 				8A781B4720F7B45C0077E3E9 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -198,8 +226,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				33C6078020F7A0EB00E7639D /* AppDelegate.mm in Sources */,
+				331C5E7F20F8E6E90020A981 /* ObjModel.mm in Sources */,
+				330D623220FA18B1003C8F42 /* Mesh.mm in Sources */,
 				332C260520F7E6DF00DA784D /* Shaders.metal in Sources */,
+				331C5E8020F8E6E90020A981 /* ObjGroup.mm in Sources */,
 				33C6077F20F7A0EB00E7639D /* main.mm in Sources */,
+				330D623120FA18B1003C8F42 /* ObjMesh.mm in Sources */,
 				332C25FE20F7DA3000DA784D /* Renderer.mm in Sources */,
 				33C6078320F7A12200E7639D /* GameViewController.mm in Sources */,
 				332C260820F7E74900DA784D /* MathUtils.mm in Sources */,

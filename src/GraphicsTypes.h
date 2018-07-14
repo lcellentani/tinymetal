@@ -4,13 +4,13 @@
 
 typedef struct {
     simd::float4 position;
-    simd::float4 color;
+    simd::float4 normal;
 } Vertex;
 
-struct SharedData
-{
+typedef struct {
     unsigned int u_frameIndex;
     float u_time;
-    
-    matrix_float4x4 u_modelViewProjection;
-};
+    matrix_float4x4 u_modelViewProjectionMatrix;
+    matrix_float4x4 u_modelViewMatrix;
+    matrix_float3x3 u_normalMatrix;
+} SharedData;
