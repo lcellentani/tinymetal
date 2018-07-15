@@ -9,22 +9,14 @@
 @synthesize indexBuffer=_indexBuffer;
 @synthesize vertexBuffer=_vertexBuffer;
 
-- (instancetype)initWithGroup:(ObjGroup *)group device:(id<MTLDevice>)device {
+- (instancetype)initWithGroup:(ObjGroup *)group device:(id<MTLDevice>)device vertexFormat:(id<VertexFormat>)vertexFormat {
     if ((self = [super init])) {
-        struct Vertex {
-            Vertex(simd_float4 p, simd_float4 n) : position(p), normal(n) {}
-            simd_float4 position;
-            simd_float4 normal;
-        };
-        std::vector<Vertex> data;
-        simd_float4* positions = (simd_float4*)[group.positionData bytes];
-        simd_float4* normals = (simd_float4*)[group.normalData bytes];
-        for(size_t i = 0; i < (size_t)group.verticesCount; i++) {
-            data.emplace_back(positions[i], normals[i]);
-        }
+        [vertexFormat setPositionBytes:[group.positionData bytes] lenght:[group.positionData length]];
+        [vertexFormat setNormalBytes:[group.normalData bytes] lenght:[group.normalData length]];
+        NSData* vertexData = [vertexFormat encode];
         
-        _vertexBuffer = [device newBufferWithBytes:data.data()
-                                            length:sizeof(data[0]) * data.size()
+        _vertexBuffer = [device newBufferWithBytes:[vertexData bytes]
+                                            length:[vertexData length]
                                            options:MTLResourceOptionCPUCacheModeDefault];
         [_vertexBuffer setLabel:[NSString stringWithFormat:@"Vertices (%@)", group.name]];
         

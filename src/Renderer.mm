@@ -3,6 +3,8 @@
 #import "MathUtils.h"
 #import "ObjMesh.h"
 #import "ObjModel.h"
+#import "ObjGroup.h"
+#import "PositionNormalVertexFormat.h"
 
 static const NSUInteger cMaxBuffersInFlight = 3;
 
@@ -96,7 +98,9 @@ static const NSUInteger cMaxBuffersInFlight = 3;
     ObjModel *model = [[ObjModel alloc] initWithContentsOfURL:modelURL generateNormals:YES];
     //ObjGroup *group = [model groupForName:@"teapot"];
     ObjGroup *group = [model groupAtIndex:0];
-    _mesh = [[ObjMesh alloc] initWithGroup:group device:_device];
+    
+    PositionNormalVertexFormat* vertexFormat = [PositionNormalVertexFormat newVertexFormat:[group verticesCount]];
+    _mesh = [[ObjMesh alloc] initWithGroup:group device:_device vertexFormat:vertexFormat];
 }
 
 - (void)makeSharedData {
@@ -180,6 +184,7 @@ static const NSUInteger cMaxBuffersInFlight = 3;
     
     id<MTLBuffer> sharedDataBuffer = _perFrameData[_frameIndex % cMaxBuffersInFlight].sharedData;
     [commandEncoder setVertexBuffer:sharedDataBuffer offset:0 atIndex:1];
+    [commandEncoder setFragmentBuffer:sharedDataBuffer offset:0 atIndex:0];
     
     [commandEncoder drawIndexedPrimitives:MTLPrimitiveTypeTriangle
                                indexCount:[_mesh.indexBuffer length] / sizeof(uint16_t)
