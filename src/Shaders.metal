@@ -30,8 +30,6 @@ constant Material material = {
 };
 
 struct Uniforms {
-    unsigned int u_frameIndex;
-    float u_time;
     float4x4 u_modelViewProjectionMatrix;
     float4x4 u_modelViewMatrix;
     float3x3 u_normalMatrix;

@@ -4,7 +4,7 @@
 
 + (id<VertexFormat>)newVertexFormat:(NSUInteger)size;
 
-- (id)initWithSize:(NSUInteger)size;
+- (instancetype)initWithSize:(NSUInteger)size;
 
 - (void)setPositionBytes:(const void *)data lenght:(NSUInteger)lenght;
 - (void)setNormalBytes:(const void *)data lenght:(NSUInteger)lenght;

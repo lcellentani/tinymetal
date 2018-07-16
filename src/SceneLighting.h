@@ -1,9 +1,10 @@
-#import <UIKit/UIKit.h>
-#import <Metal/Metal.h>
+#import "Scene.h"
 
-@protocol Scene<NSObject>
+@interface SceneLighting : NSObject<Scene>
 
-@required
++ (id<Scene>)newScene;
+
+- (instancetype)init;
 
 - (void)prepare:(id<MTLDevice>)device inFlightBuffersCount:(NSUInteger)buffersCount;
 

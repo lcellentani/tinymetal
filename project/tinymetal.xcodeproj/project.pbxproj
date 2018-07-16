@@ -31,6 +31,7 @@
 		8A781B4620F7B45C0077E3E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A781B4420F7B45C0077E3E9 /* Main.storyboard */; };
 		8A781B4720F7B45C0077E3E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A781B4520F7B45C0077E3E9 /* LaunchScreen.storyboard */; };
 		8A781B4920F7B9500077E3E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A781B4820F7B9500077E3E9 /* Images.xcassets */; };
+		8AA3AD8320FD37FB0067DB8D /* SceneLighting.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3AD8220FD37FB0067DB8D /* SceneLighting.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +50,6 @@
 		331C5E7E20F8E6E90020A981 /* ObjGroup.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjGroup.mm; sourceTree = "<group>"; };
 		332C25FC20F7DA3000DA784D /* Renderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Renderer.mm; sourceTree = "<group>"; };
 		332C25FD20F7DA3000DA784D /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
-		332C25FF20F7E20000DA784D /* GraphicsTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicsTypes.h; sourceTree = "<group>"; };
 		332C260420F7E6DF00DA784D /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		332C260620F7E74900DA784D /* MathUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MathUtils.mm; sourceTree = "<group>"; };
 		332C260720F7E74900DA784D /* MathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathUtils.h; sourceTree = "<group>"; };
@@ -78,6 +78,9 @@
 		8A781B4420F7B45C0077E3E9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8A781B4520F7B45C0077E3E9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A781B4820F7B9500077E3E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8AA3AD8020FD37DE0067DB8D /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		8AA3AD8120FD37FB0067DB8D /* SceneLighting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneLighting.h; sourceTree = "<group>"; };
+		8AA3AD8220FD37FB0067DB8D /* SceneLighting.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SceneLighting.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +168,9 @@
 			children = (
 				33E6EAC620FD2CC100B5595F /* imgui_impl_metal.h */,
 				33E6EAC720FD2CC100B5595F /* imgui_impl_metal.mm */,
+				8AA3AD8120FD37FB0067DB8D /* SceneLighting.h */,
+				8AA3AD8220FD37FB0067DB8D /* SceneLighting.mm */,
+				8AA3AD8020FD37DE0067DB8D /* Scene.h */,
 				3360ED0320FD02EB007BBBD4 /* stb */,
 				3360ED0220FD02D2007BBBD4 /* imgui */,
 				330D623720FBB135003C8F42 /* PositionNormalVertexFormat.h */,
@@ -181,7 +187,6 @@
 				332C260720F7E74900DA784D /* MathUtils.h */,
 				332C260620F7E74900DA784D /* MathUtils.mm */,
 				332C260420F7E6DF00DA784D /* Shaders.metal */,
-				332C25FF20F7E20000DA784D /* GraphicsTypes.h */,
 				332C25FD20F7DA3000DA784D /* Renderer.h */,
 				332C25FC20F7DA3000DA784D /* Renderer.mm */,
 				33C6078220F7A12200E7639D /* GameViewController.h */,
@@ -288,6 +293,7 @@
 				33C6077F20F7A0EB00E7639D /* main.mm in Sources */,
 				330D623120FA18B1003C8F42 /* ObjMesh.mm in Sources */,
 				332C25FE20F7DA3000DA784D /* Renderer.mm in Sources */,
+				8AA3AD8320FD37FB0067DB8D /* SceneLighting.mm in Sources */,
 				33C6078320F7A12200E7639D /* GameViewController.mm in Sources */,
 				330D623A20FBB135003C8F42 /* PositionNormalVertexFormat.mm in Sources */,
 				332C260820F7E74900DA784D /* MathUtils.mm in Sources */,
@@ -419,7 +425,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = woot.tinymetal;
+				PRODUCT_BUNDLE_IDENTIFIER = dot.woot.tinymetal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -437,7 +443,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = woot.tinymetal;
+				PRODUCT_BUNDLE_IDENTIFIER = dot.woot.tinymetal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
