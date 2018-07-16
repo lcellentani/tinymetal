@@ -8,7 +8,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window.rootViewController.view.backgroundColor = [UIColor redColor];
+    self.window.rootViewController.view.backgroundColor = [UIColor greenColor];
     return YES;
 }
 
