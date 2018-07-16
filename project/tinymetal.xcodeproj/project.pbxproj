@@ -17,6 +17,9 @@
 		332C25FE20F7DA3000DA784D /* Renderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 332C25FC20F7DA3000DA784D /* Renderer.mm */; };
 		332C260520F7E6DF00DA784D /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 332C260420F7E6DF00DA784D /* Shaders.metal */; };
 		332C260820F7E74900DA784D /* MathUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 332C260620F7E74900DA784D /* MathUtils.mm */; };
+		3360ED0D20FD032D007BBBD4 /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3360ED0720FD032C007BBBD4 /* imgui_draw.cpp */; };
+		3360ED0E20FD032D007BBBD4 /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3360ED0820FD032C007BBBD4 /* imgui_demo.cpp */; };
+		3360ED0F20FD032D007BBBD4 /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3360ED0B20FD032C007BBBD4 /* imgui.cpp */; };
 		33C6077720F7A0CB00E7639D /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C6077620F7A0CB00E7639D /* MetalKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		33C6077920F7A0CF00E7639D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C6077820F7A0CF00E7639D /* Metal.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		33C6077B20F7A0E000E7639D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C6077A20F7A0E000E7639D /* QuartzCore.framework */; };
@@ -24,6 +27,7 @@
 		33C6078020F7A0EB00E7639D /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C6077E20F7A0EB00E7639D /* AppDelegate.mm */; };
 		33C6078320F7A12200E7639D /* GameViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C6078120F7A12200E7639D /* GameViewController.mm */; };
 		33C6078520F7A1AF00E7639D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C6078420F7A1AF00E7639D /* UIKit.framework */; };
+		33E6EAC820FD2CC200B5595F /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E6EAC720FD2CC100B5595F /* imgui_impl_metal.mm */; };
 		8A781B4620F7B45C0077E3E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A781B4420F7B45C0077E3E9 /* Main.storyboard */; };
 		8A781B4720F7B45C0077E3E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A781B4520F7B45C0077E3E9 /* LaunchScreen.storyboard */; };
 		8A781B4920F7B9500077E3E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A781B4820F7B9500077E3E9 /* Images.xcassets */; };
@@ -49,6 +53,15 @@
 		332C260420F7E6DF00DA784D /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		332C260620F7E74900DA784D /* MathUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MathUtils.mm; sourceTree = "<group>"; };
 		332C260720F7E74900DA784D /* MathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathUtils.h; sourceTree = "<group>"; };
+		3360ED0420FD0314007BBBD4 /* stb_rect_pack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_rect_pack.h; sourceTree = "<group>"; };
+		3360ED0520FD0314007BBBD4 /* stb_truetype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_truetype.h; sourceTree = "<group>"; };
+		3360ED0620FD0314007BBBD4 /* stb_textedit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_textedit.h; sourceTree = "<group>"; };
+		3360ED0720FD032C007BBBD4 /* imgui_draw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_draw.cpp; sourceTree = "<group>"; };
+		3360ED0820FD032C007BBBD4 /* imgui_demo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_demo.cpp; sourceTree = "<group>"; };
+		3360ED0920FD032C007BBBD4 /* imconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imconfig.h; sourceTree = "<group>"; };
+		3360ED0A20FD032C007BBBD4 /* imgui_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_internal.h; sourceTree = "<group>"; };
+		3360ED0B20FD032C007BBBD4 /* imgui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui.cpp; sourceTree = "<group>"; };
+		3360ED0C20FD032D007BBBD4 /* imgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui.h; sourceTree = "<group>"; };
 		3397991120F79D94006A2E39 /* tinymetal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tinymetal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C6076320F7A03B00E7639D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33C6077620F7A0CB00E7639D /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
@@ -60,6 +73,8 @@
 		33C6078120F7A12200E7639D /* GameViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameViewController.mm; sourceTree = "<group>"; };
 		33C6078220F7A12200E7639D /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		33C6078420F7A1AF00E7639D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		33E6EAC620FD2CC100B5595F /* imgui_impl_metal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_impl_metal.h; sourceTree = "<group>"; };
+		33E6EAC720FD2CC100B5595F /* imgui_impl_metal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = imgui_impl_metal.mm; sourceTree = "<group>"; };
 		8A781B4420F7B45C0077E3E9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8A781B4520F7B45C0077E3E9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A781B4820F7B9500077E3E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -88,6 +103,31 @@
 			);
 			name = Media;
 			path = ../media;
+			sourceTree = "<group>";
+		};
+		3360ED0220FD02D2007BBBD4 /* imgui */ = {
+			isa = PBXGroup;
+			children = (
+				3360ED0920FD032C007BBBD4 /* imconfig.h */,
+				3360ED0820FD032C007BBBD4 /* imgui_demo.cpp */,
+				3360ED0720FD032C007BBBD4 /* imgui_draw.cpp */,
+				3360ED0A20FD032C007BBBD4 /* imgui_internal.h */,
+				3360ED0B20FD032C007BBBD4 /* imgui.cpp */,
+				3360ED0C20FD032D007BBBD4 /* imgui.h */,
+			);
+			name = imgui;
+			path = ../lib/imgui;
+			sourceTree = "<group>";
+		};
+		3360ED0320FD02EB007BBBD4 /* stb */ = {
+			isa = PBXGroup;
+			children = (
+				3360ED0420FD0314007BBBD4 /* stb_rect_pack.h */,
+				3360ED0620FD0314007BBBD4 /* stb_textedit.h */,
+				3360ED0520FD0314007BBBD4 /* stb_truetype.h */,
+			);
+			name = stb;
+			path = ../lib/stb;
 			sourceTree = "<group>";
 		};
 		3397990820F79D94006A2E39 = {
@@ -123,6 +163,10 @@
 		33C6076220F7A01000E7639D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				33E6EAC620FD2CC100B5595F /* imgui_impl_metal.h */,
+				33E6EAC720FD2CC100B5595F /* imgui_impl_metal.mm */,
+				3360ED0320FD02EB007BBBD4 /* stb */,
+				3360ED0220FD02D2007BBBD4 /* imgui */,
 				330D623720FBB135003C8F42 /* PositionNormalVertexFormat.h */,
 				330D623820FBB135003C8F42 /* PositionNormalVertexFormat.mm */,
 				330D623920FBB135003C8F42 /* VertexFormat.h */,
@@ -233,8 +277,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				33C6078020F7A0EB00E7639D /* AppDelegate.mm in Sources */,
+				33E6EAC820FD2CC200B5595F /* imgui_impl_metal.mm in Sources */,
 				331C5E7F20F8E6E90020A981 /* ObjModel.mm in Sources */,
 				330D623220FA18B1003C8F42 /* Mesh.mm in Sources */,
+				3360ED0E20FD032D007BBBD4 /* imgui_demo.cpp in Sources */,
+				3360ED0D20FD032D007BBBD4 /* imgui_draw.cpp in Sources */,
+				3360ED0F20FD032D007BBBD4 /* imgui.cpp in Sources */,
 				332C260520F7E6DF00DA784D /* Shaders.metal in Sources */,
 				331C5E8020F8E6E90020A981 /* ObjGroup.mm in Sources */,
 				33C6077F20F7A0EB00E7639D /* main.mm in Sources */,

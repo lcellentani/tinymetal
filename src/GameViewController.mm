@@ -2,6 +2,7 @@
 #import <MetalKit/MetalKit.h>
 
 #import "Renderer.h"
+#include "imgui.h"
 
 @interface GameViewController ()
 
@@ -42,6 +43,40 @@
     _renderer = [[Renderer alloc] initWithMetalKitView:_view];
     [_renderer mtkView:_view drawableSizeWillChange:_view.bounds.size];
     _view.delegate = _renderer;
+}
+
+#pragma mark - Touches handling
+
+- (void)updateIOWithTouchEvent:(UIEvent *)event {
+    UITouch *anyTouch = event.allTouches.anyObject;
+    CGPoint touchLocation = [anyTouch locationInView:self.view];
+    ImGuiIO &io = ImGui::GetIO();
+    io.MousePos = ImVec2(touchLocation.x, touchLocation.y);
+    
+    BOOL hasActiveTouch = NO;
+    for (UITouch *touch in event.allTouches) {
+        if (touch.phase != UITouchPhaseEnded && touch.phase != UITouchPhaseCancelled) {
+            hasActiveTouch = YES;
+            break;
+        }
+    }
+    io.MouseDown[0] = hasActiveTouch;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self updateIOWithTouchEvent:event];
+}
+
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self updateIOWithTouchEvent:event];
+}
+
+- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self updateIOWithTouchEvent:event];
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self updateIOWithTouchEvent:event];
 }
 
 @end
