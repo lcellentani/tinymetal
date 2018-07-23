@@ -4,8 +4,6 @@
 #include "imgui.h"
 #include "imgui_impl_metal.h"
 
-static const NSUInteger cMaxBuffersInFlight = 3;
-
 @interface Renderer ()
 
 @end
@@ -22,7 +20,13 @@ static const NSUInteger cMaxBuffersInFlight = 3;
     uint32_t _frameIndex;
     CGSize _drawableSize;
     
-    SceneLighting* _sceneLighting;
+    id<Scene> _sceneLighting;
+}
+
+@synthesize device = _device;
+-(NSUInteger) inFlightBuffersCount {
+    static const NSUInteger cMaxBuffersInFlight = 3;
+    return cMaxBuffersInFlight;
 }
 
 -(nonnull instancetype)initWithMetalKitView:(nonnull MTKView *)view; {
@@ -44,7 +48,7 @@ static const NSUInteger cMaxBuffersInFlight = 3;
         ImGui_ImplMetal_Init(_device);
         ImGui::StyleColorsDark();
         
-        _inFlightSemaphore = dispatch_semaphore_create(cMaxBuffersInFlight);
+        _inFlightSemaphore = dispatch_semaphore_create(self.inFlightBuffersCount);
         
         _frameIndex = 0;
         _startupTime = CACurrentMediaTime();
@@ -52,7 +56,7 @@ static const NSUInteger cMaxBuffersInFlight = 3;
         _currentTime = 0;
         
         _sceneLighting = [SceneLighting newScene];
-        [_sceneLighting prepare:_device inFlightBuffersCount:cMaxBuffersInFlight];
+        [_sceneLighting prepareUsingRenderer:self];
     }
     return self;
 }
@@ -98,9 +102,13 @@ static const NSUInteger cMaxBuffersInFlight = 3;
     ImGui_ImplMetal_NewFrame(renderPassDescriptor);
     
     ImGui::SetNextWindowPos(ImVec2(5.0f, 5.0f), ImGuiSetCond_FirstUseEver);
-    ImGui::Begin([[_sceneLighting title] UTF8String], nullptr, ImVec2(_drawableSize.width * 0.5f, _drawableSize.height * 0.1f), -1.f, ImGuiWindowFlags_AlwaysAutoResize);
+    ImGui::Begin("Global Params", nullptr, ImVec2(_drawableSize.width * 0.5f, _drawableSize.height * 0.1f), -1.f, ImGuiWindowFlags_AlwaysAutoResize);
     ImGui::Text("Time: %f ms", elapsed);
     ImGui::End();
+    
+    if ([_sceneLighting respondsToSelector:@selector(renderDebugFrame:)]) {
+        [_sceneLighting renderDebugFrame:_drawableSize];
+    }
     
     ImGui::Render();
     ImDrawData *drawData = ImGui::GetDrawData();

@@ -6,7 +6,7 @@
 
 - (instancetype)init;
 
-- (void)prepare:(id<MTLDevice>)device inFlightBuffersCount:(NSUInteger)buffersCount;
+- (void)prepareUsingRenderer:(Renderer *)renderer;
 
 - (void)updateFrame:(NSUInteger)frameIndex elapsedTime:(float)elapsedTime drawableSize:(CGSize)drawableSize;
 
