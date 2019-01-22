@@ -3,6 +3,9 @@
 
 #include "imgui.h"
 #include "imgui_impl_metal.h"
+#if TARGET_OS_OSX
+#include "imgui_impl_osx.h"
+#endif
 
 @interface Renderer ()
 
@@ -46,11 +49,10 @@
         _device = view.device;
         _commandQueue = [_device newCommandQueue];
         
-        //IMGUI_CHECKVERSION();
-        //ImGui::CreateContext();
-        //(void)ImGui::GetIO();
-        //ImGui_ImplMetal_Init(_device);
-        //ImGui::StyleColorsDark();
+        IMGUI_CHECKVERSION();
+        ImGui::CreateContext();
+        ImGui::StyleColorsDark();
+        ImGui_ImplMetal_Init(_device);
         
         _inFlightSemaphore = dispatch_semaphore_create(self.inFlightBuffersCount);
         
@@ -99,11 +101,24 @@
     
     [commandEncoder popDebugGroup];
     
-    /*[commandEncoder pushDebugGroup:@"Draw ImGui"];
+    [commandEncoder pushDebugGroup:@"Draw ImGui"];
     
     ImGuiIO &io = ImGui::GetIO();
+    io.DisplaySize.x = view.bounds.size.width;
+    io.DisplaySize.y = view.bounds.size.height;
+#if TARGET_OS_OSX
+    CGFloat framebufferScale = view.window.screen.backingScaleFactor ?: NSScreen.mainScreen.backingScaleFactor;
+#else
+    CGFloat framebufferScale = view.window.screen.scale ?: UIScreen.mainScreen.scale;
+#endif
+    io.DisplayFramebufferScale = ImVec2(framebufferScale, framebufferScale);
     io.DeltaTime = 1 / float(view.preferredFramesPerSecond ?: 60);
+    
     ImGui_ImplMetal_NewFrame(renderPassDescriptor);
+#if TARGET_OS_OSX
+    ImGui_ImplOSX_NewFrame(view);
+#endif
+    ImGui::NewFrame();
     
     ImGui::SetNextWindowPos(ImVec2(5.0f, 5.0f), ImGuiSetCond_FirstUseEver);
     ImGui::Begin("Global Params", nullptr, ImVec2(_drawableSize.width * 0.5f, _drawableSize.height * 0.1f), -1.f, ImGuiWindowFlags_AlwaysAutoResize);
@@ -118,7 +133,7 @@
     ImDrawData *drawData = ImGui::GetDrawData();
     ImGui_ImplMetal_RenderDrawData(drawData, commandBuffer, commandEncoder);
     
-    [commandEncoder popDebugGroup];*/
+    [commandEncoder popDebugGroup];
     
     [commandEncoder endEncoding];
     
@@ -131,17 +146,6 @@
 - (void)mtkView:(nonnull MTKView *)view drawableSizeWillChange:(CGSize)size {
     _frameIndex = 0;
     _drawableSize = size;
-#if TARGET_OS_OSX
-#else
-    _drawableSize.width *= view.contentScaleFactor;
-    _drawableSize.height *= view.contentScaleFactor;
-    
-    /*ImGuiIO &io = ImGui::GetIO();
-    io.DisplaySize.x = size.width;
-    io.DisplaySize.y = size.height;
-    CGFloat framebufferScale = view.window.screen.scale ?: UIScreen.mainScreen.scale;
-    io.DisplayFramebufferScale = ImVec2(framebufferScale, framebufferScale);*/
-#endif
 }
     
 @end

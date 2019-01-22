@@ -171,7 +171,7 @@ typedef struct {
 }
 
 - (void) renderDebugFrame:(CGSize)drawableSize {
-    /*ImGui::SetNextWindowPos(ImVec2(5.0f, 50.0f), ImGuiSetCond_FirstUseEver);
+    ImGui::SetNextWindowPos(ImVec2(5.0f, 50.0f), ImGuiSetCond_FirstUseEver);
     ImGui::Begin([self.title UTF8String], nullptr, ImVec2(drawableSize.width * 0.5f, drawableSize.height * 0.1f), -1.f, ImGuiWindowFlags_AlwaysAutoResize);
     
     ImGui::DragFloat3("translation", _translation, 0.1f);
@@ -188,7 +188,7 @@ typedef struct {
     ImGui::Separator();
     ImGui::DragFloat3("camera pos", _cameraPosition, 0.01f);
     
-    ImGui::End();*/
+    ImGui::End();
 }
 
 -(void) resetModel {

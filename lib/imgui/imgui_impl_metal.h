@@ -1,6 +1,14 @@
-// ImGui Renderer for: Metal
+// dear imgui: Renderer for Metal
+// This needs to be used along with a Platform Binding (e.g. OSX)
 
-@class CAMetalLayer, MTLRenderPassDescriptor;
+// Implemented features:
+//  [X] Renderer: User texture binding. Use 'MTLTexture' as ImTextureID. Read the FAQ about ImTextureID in imgui.cpp.
+
+// You can copy and use unmodified imgui_impl_* files in your project. See main.cpp for an example of using this.
+// If you are new to dear imgui, read examples/README.txt and read the documentation at the top of imgui.cpp.
+// https://github.com/ocornut/imgui
+
+@class MTLRenderPassDescriptor;
 @protocol MTLDevice, MTLCommandBuffer, MTLRenderCommandEncoder;
 
 IMGUI_IMPL_API bool ImGui_ImplMetal_Init(id<MTLDevice> device);

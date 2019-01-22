@@ -14,6 +14,14 @@
 		330D623A20FBB135003C8F42 /* PositionNormalVertexFormat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 330D623820FBB135003C8F42 /* PositionNormalVertexFormat.mm */; };
 		331C5E7F20F8E6E90020A981 /* ObjModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 331C5E7D20F8E6E90020A981 /* ObjModel.mm */; };
 		331C5E8020F8E6E90020A981 /* ObjGroup.mm in Sources */ = {isa = PBXBuildFile; fileRef = 331C5E7E20F8E6E90020A981 /* ObjGroup.mm */; };
+		33220FC821F7778E00C00F7C /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33220FC321F7778E00C00F7C /* imgui_impl_metal.mm */; };
+		33220FCA21F7778E00C00F7C /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33220FC721F7778E00C00F7C /* imgui_widgets.cpp */; };
+		33220FCB21F7779500C00F7C /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33220FC321F7778E00C00F7C /* imgui_impl_metal.mm */; };
+		33220FCC21F7779800C00F7C /* imgui_impl_osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33220FC421F7778E00C00F7C /* imgui_impl_osx.mm */; };
+		33220FCD21F7779E00C00F7C /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33220FC721F7778E00C00F7C /* imgui_widgets.cpp */; };
+		33220FCE21F777A500C00F7C /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3360ED0820FD032C007BBBD4 /* imgui_demo.cpp */; };
+		33220FCF21F777A800C00F7C /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3360ED0720FD032C007BBBD4 /* imgui_draw.cpp */; };
+		33220FD021F777AC00C00F7C /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3360ED0B20FD032C007BBBD4 /* imgui.cpp */; };
 		332C25FE20F7DA3000DA784D /* Renderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 332C25FC20F7DA3000DA784D /* Renderer.mm */; };
 		332C260520F7E6DF00DA784D /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 332C260420F7E6DF00DA784D /* Shaders.metal */; };
 		332C260820F7E74900DA784D /* MathUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 332C260620F7E74900DA784D /* MathUtils.mm */; };
@@ -26,7 +34,6 @@
 		33C6077F20F7A0EB00E7639D /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C6077C20F7A0EB00E7639D /* main.mm */; };
 		33C6078020F7A0EB00E7639D /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C6077E20F7A0EB00E7639D /* AppDelegate.mm */; };
 		33C6078520F7A1AF00E7639D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C6078420F7A1AF00E7639D /* UIKit.framework */; };
-		33E6EAC820FD2CC200B5595F /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E6EAC720FD2CC100B5595F /* imgui_impl_metal.mm */; };
 		8A09727321F670F400B66D76 /* GameViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C6078120F7A12200E7639D /* GameViewController.mm */; };
 		8A09727421F670FA00B66D76 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C6077E20F7A0EB00E7639D /* AppDelegate.mm */; };
 		8A09727521F670FD00B66D76 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C6077C20F7A0EB00E7639D /* main.mm */; };
@@ -76,14 +83,19 @@
 		331C5E7C20F8E54D0020A981 /* ObjGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjGroup.h; sourceTree = "<group>"; };
 		331C5E7D20F8E6E90020A981 /* ObjModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjModel.mm; sourceTree = "<group>"; };
 		331C5E7E20F8E6E90020A981 /* ObjGroup.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjGroup.mm; sourceTree = "<group>"; };
+		33220FC321F7778E00C00F7C /* imgui_impl_metal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = imgui_impl_metal.mm; sourceTree = "<group>"; };
+		33220FC421F7778E00C00F7C /* imgui_impl_osx.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = imgui_impl_osx.mm; sourceTree = "<group>"; };
+		33220FC521F7778E00C00F7C /* imgui_impl_metal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_impl_metal.h; sourceTree = "<group>"; };
+		33220FC621F7778E00C00F7C /* imgui_impl_osx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_impl_osx.h; sourceTree = "<group>"; };
+		33220FC721F7778E00C00F7C /* imgui_widgets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_widgets.cpp; sourceTree = "<group>"; };
+		33220FD121F7791500C00F7C /* imstb_textedit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imstb_textedit.h; sourceTree = "<group>"; };
+		33220FD221F7791500C00F7C /* imstb_truetype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imstb_truetype.h; sourceTree = "<group>"; };
+		33220FD321F7791500C00F7C /* imstb_rectpack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imstb_rectpack.h; sourceTree = "<group>"; };
 		332C25FC20F7DA3000DA784D /* Renderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Renderer.mm; sourceTree = "<group>"; };
 		332C25FD20F7DA3000DA784D /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
 		332C260420F7E6DF00DA784D /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		332C260620F7E74900DA784D /* MathUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MathUtils.mm; sourceTree = "<group>"; };
 		332C260720F7E74900DA784D /* MathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathUtils.h; sourceTree = "<group>"; };
-		3360ED0420FD0314007BBBD4 /* stb_rect_pack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_rect_pack.h; sourceTree = "<group>"; };
-		3360ED0520FD0314007BBBD4 /* stb_truetype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_truetype.h; sourceTree = "<group>"; };
-		3360ED0620FD0314007BBBD4 /* stb_textedit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_textedit.h; sourceTree = "<group>"; };
 		3360ED0720FD032C007BBBD4 /* imgui_draw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_draw.cpp; sourceTree = "<group>"; };
 		3360ED0820FD032C007BBBD4 /* imgui_demo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_demo.cpp; sourceTree = "<group>"; };
 		3360ED0920FD032C007BBBD4 /* imconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imconfig.h; sourceTree = "<group>"; };
@@ -100,8 +112,6 @@
 		33C6078120F7A12200E7639D /* GameViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameViewController.mm; sourceTree = "<group>"; };
 		33C6078220F7A12200E7639D /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		33C6078420F7A1AF00E7639D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		33E6EAC620FD2CC100B5595F /* imgui_impl_metal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_impl_metal.h; sourceTree = "<group>"; };
-		33E6EAC720FD2CC100B5595F /* imgui_impl_metal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = imgui_impl_metal.mm; sourceTree = "<group>"; };
 		8A09727621F6711600B66D76 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Metal.framework; sourceTree = DEVELOPER_DIR; };
 		8A09727821F6711B00B66D76 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/MetalKit.framework; sourceTree = DEVELOPER_DIR; };
 		8A09727A21F6726400B66D76 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -169,6 +179,14 @@
 		3360ED0220FD02D2007BBBD4 /* imgui */ = {
 			isa = PBXGroup;
 			children = (
+				33220FD321F7791500C00F7C /* imstb_rectpack.h */,
+				33220FD121F7791500C00F7C /* imstb_textedit.h */,
+				33220FD221F7791500C00F7C /* imstb_truetype.h */,
+				33220FC521F7778E00C00F7C /* imgui_impl_metal.h */,
+				33220FC321F7778E00C00F7C /* imgui_impl_metal.mm */,
+				33220FC621F7778E00C00F7C /* imgui_impl_osx.h */,
+				33220FC421F7778E00C00F7C /* imgui_impl_osx.mm */,
+				33220FC721F7778E00C00F7C /* imgui_widgets.cpp */,
 				3360ED0920FD032C007BBBD4 /* imconfig.h */,
 				3360ED0820FD032C007BBBD4 /* imgui_demo.cpp */,
 				3360ED0720FD032C007BBBD4 /* imgui_draw.cpp */,
@@ -178,17 +196,6 @@
 			);
 			name = imgui;
 			path = ../lib/imgui;
-			sourceTree = "<group>";
-		};
-		3360ED0320FD02EB007BBBD4 /* stb */ = {
-			isa = PBXGroup;
-			children = (
-				3360ED0420FD0314007BBBD4 /* stb_rect_pack.h */,
-				3360ED0620FD0314007BBBD4 /* stb_textedit.h */,
-				3360ED0520FD0314007BBBD4 /* stb_truetype.h */,
-			);
-			name = stb;
-			path = ../lib/stb;
 			sourceTree = "<group>";
 		};
 		3397990820F79D94006A2E39 = {
@@ -223,14 +230,11 @@
 		33C6076220F7A01000E7639D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				33E6EAC620FD2CC100B5595F /* imgui_impl_metal.h */,
-				33E6EAC720FD2CC100B5595F /* imgui_impl_metal.mm */,
 				8AA3AD8120FD37FB0067DB8D /* SceneLighting.h */,
 				8AA3AD8220FD37FB0067DB8D /* SceneLighting.mm */,
 				8A71A0AE20FFD1770001044B /* SceneTexturing.h */,
 				8A71A0AD20FFD1770001044B /* SceneTexturing.mm */,
 				8AA3AD8020FD37DE0067DB8D /* Scene.h */,
-				3360ED0320FD02EB007BBBD4 /* stb */,
 				3360ED0220FD02D2007BBBD4 /* imgui */,
 				330D623720FBB135003C8F42 /* PositionNormalVertexFormat.h */,
 				330D623820FBB135003C8F42 /* PositionNormalVertexFormat.mm */,
@@ -407,9 +411,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				33C6078020F7A0EB00E7639D /* AppDelegate.mm in Sources */,
-				33E6EAC820FD2CC200B5595F /* imgui_impl_metal.mm in Sources */,
 				331C5E7F20F8E6E90020A981 /* ObjModel.mm in Sources */,
 				8A34CAAD2106743F005D45D6 /* Image.mm in Sources */,
+				33220FCA21F7778E00C00F7C /* imgui_widgets.cpp in Sources */,
 				330D623220FA18B1003C8F42 /* Mesh.mm in Sources */,
 				3360ED0E20FD032D007BBBD4 /* imgui_demo.cpp in Sources */,
 				8A09727C21F6754400B66D76 /* GameViewController.mm in Sources */,
@@ -420,6 +424,7 @@
 				33C6077F20F7A0EB00E7639D /* main.mm in Sources */,
 				330D623120FA18B1003C8F42 /* ObjMesh.mm in Sources */,
 				332C25FE20F7DA3000DA784D /* Renderer.mm in Sources */,
+				33220FC821F7778E00C00F7C /* imgui_impl_metal.mm in Sources */,
 				8A71A0AF20FFD1770001044B /* SceneTexturing.mm in Sources */,
 				8AA3AD8320FD37FB0067DB8D /* SceneLighting.mm in Sources */,
 				330D623A20FBB135003C8F42 /* PositionNormalVertexFormat.mm in Sources */,
@@ -432,17 +437,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A09727F21F676DA00B66D76 /* Mesh.mm in Sources */,
+				33220FCB21F7779500C00F7C /* imgui_impl_metal.mm in Sources */,
 				8A09728021F676DD00B66D76 /* ObjMesh.mm in Sources */,
 				8A09727D21F676D100B66D76 /* SceneLighting.mm in Sources */,
 				8A09727E21F676D500B66D76 /* PositionNormalVertexFormat.mm in Sources */,
 				8A09727521F670FD00B66D76 /* main.mm in Sources */,
 				8A09727421F670FA00B66D76 /* AppDelegate.mm in Sources */,
 				8A09728221F676E200B66D76 /* ObjGroup.mm in Sources */,
+				33220FCC21F7779800C00F7C /* imgui_impl_osx.mm in Sources */,
 				8A09727321F670F400B66D76 /* GameViewController.mm in Sources */,
 				8A09728421F676E700B66D76 /* Shaders.metal in Sources */,
+				33220FCF21F777A800C00F7C /* imgui_draw.cpp in Sources */,
 				8A09728121F676DF00B66D76 /* ObjModel.mm in Sources */,
 				8A09728521F676EA00B66D76 /* Renderer.mm in Sources */,
+				33220FCD21F7779E00C00F7C /* imgui_widgets.cpp in Sources */,
+				33220FCE21F777A500C00F7C /* imgui_demo.cpp in Sources */,
 				8A09728321F676E400B66D76 /* MathUtils.mm in Sources */,
+				33220FD021F777AC00C00F7C /* imgui.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,10 +576,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 678TP86R4P;
-				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../lib/imgui/",
-					"$(SRCROOT)/../lib/stb/",
-				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../lib/imgui/";
 				INFOPLIST_FILE = "$(SRCROOT)/ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -587,10 +595,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 678TP86R4P;
-				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../lib/imgui/",
-					"$(SRCROOT)/../lib/stb/",
-				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../lib/imgui/";
 				INFOPLIST_FILE = "$(SRCROOT)/ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -612,6 +617,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 678TP86R4P;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../lib/imgui/";
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -635,6 +641,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 678TP86R4P;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../lib/imgui/";
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
