@@ -1,9 +1,10 @@
-#import <Metal/Metal.h>
-#import "Renderer.h"
+#import "Scene.h"
 
-@protocol Scene<NSObject>
+@interface SceneTexturing : NSObject<Scene>
 
-@required
++ (id<Scene>)newScene;
+
+- (instancetype)init;
 
 - (void)prepareUsingRenderer:(Renderer *)renderer;
 
@@ -12,9 +13,5 @@
 - (void)renderFrame:(id<MTLDevice>)device commandEncoder:(id<MTLRenderCommandEncoder>)commandEncoder frameIndex:(NSUInteger)frameIndex;
 
 - (NSString *) title;
-
-@optional
-
-- (void) renderDebugFrame:(CGSize)drawableSize;
 
 @end

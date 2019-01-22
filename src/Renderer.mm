@@ -20,7 +20,7 @@
     uint32_t _frameIndex;
     CGSize _drawableSize;
     
-    id<Scene> _sceneLighting;
+    id<Scene> _scene;
 }
 
 @synthesize device = _device;
@@ -32,21 +32,25 @@
 -(nonnull instancetype)initWithMetalKitView:(nonnull MTKView *)view; {
     self = [super init];
     if(self) {
+#if TARGET_OS_OSX
+        //CGFloat framebufferScale = view.window.screen.backingScaleFactor ? : NSScreen.mainScreen.backingScaleFactor;
+#else
         view.contentScaleFactor = [[UIScreen mainScreen] scale];
+#endif
         view.clearColor = MTLClearColorMake(0.85, 0.85, 0.85, 1);
         view.colorPixelFormat = MTLPixelFormatBGRA8Unorm;
         view.depthStencilPixelFormat = MTLPixelFormatDepth32Float;
         view.sampleCount = 1;
         view.preferredFramesPerSecond = 60;
-        
+
         _device = view.device;
         _commandQueue = [_device newCommandQueue];
         
-        IMGUI_CHECKVERSION();
-        ImGui::CreateContext();
-        (void)ImGui::GetIO();
-        ImGui_ImplMetal_Init(_device);
-        ImGui::StyleColorsDark();
+        //IMGUI_CHECKVERSION();
+        //ImGui::CreateContext();
+        //(void)ImGui::GetIO();
+        //ImGui_ImplMetal_Init(_device);
+        //ImGui::StyleColorsDark();
         
         _inFlightSemaphore = dispatch_semaphore_create(self.inFlightBuffersCount);
         
@@ -55,8 +59,8 @@
         _lastTime = CACurrentMediaTime();
         _currentTime = 0;
         
-        _sceneLighting = [SceneLighting newScene];
-        [_sceneLighting prepareUsingRenderer:self];
+        _scene = [SceneLighting newScene];
+        [_scene prepareUsingRenderer:self];
     }
     return self;
 }
@@ -78,7 +82,7 @@
     _currentTime = CACurrentMediaTime() - _startupTime;
     float elapsed = _currentTime - _lastTime;
     
-    [_sceneLighting updateFrame:_frameIndex elapsedTime:elapsed drawableSize:_drawableSize];
+    [_scene updateFrame:_frameIndex elapsedTime:elapsed drawableSize:_drawableSize];
     
     MTLRenderPassDescriptor *renderPassDescriptor = view.currentRenderPassDescriptor;
     if (renderPassDescriptor == nil) {
@@ -91,11 +95,11 @@
     
     [commandEncoder pushDebugGroup:@"Draw scene"];
     
-    [_sceneLighting renderFrame:_device commandEncoder:commandEncoder frameIndex:_frameIndex];
+    [_scene renderFrame:_device commandEncoder:commandEncoder frameIndex:_frameIndex];
     
     [commandEncoder popDebugGroup];
     
-    [commandEncoder pushDebugGroup:@"Draw ImGui"];
+    /*[commandEncoder pushDebugGroup:@"Draw ImGui"];
     
     ImGuiIO &io = ImGui::GetIO();
     io.DeltaTime = 1 / float(view.preferredFramesPerSecond ?: 60);
@@ -106,15 +110,15 @@
     ImGui::Text("Time: %f ms", elapsed);
     ImGui::End();
     
-    if ([_sceneLighting respondsToSelector:@selector(renderDebugFrame:)]) {
-        [_sceneLighting renderDebugFrame:_drawableSize];
+    if ([_scene respondsToSelector:@selector(renderDebugFrame:)]) {
+        [_scene renderDebugFrame:_drawableSize];
     }
     
     ImGui::Render();
     ImDrawData *drawData = ImGui::GetDrawData();
     ImGui_ImplMetal_RenderDrawData(drawData, commandBuffer, commandEncoder);
     
-    [commandEncoder popDebugGroup];
+    [commandEncoder popDebugGroup];*/
     
     [commandEncoder endEncoding];
     
@@ -125,17 +129,19 @@
 }
     
 - (void)mtkView:(nonnull MTKView *)view drawableSizeWillChange:(CGSize)size {
+    _frameIndex = 0;
     _drawableSize = size;
+#if TARGET_OS_OSX
+#else
     _drawableSize.width *= view.contentScaleFactor;
     _drawableSize.height *= view.contentScaleFactor;
     
-    _frameIndex = 0;
-    
-    ImGuiIO &io = ImGui::GetIO();
+    /*ImGuiIO &io = ImGui::GetIO();
     io.DisplaySize.x = size.width;
     io.DisplaySize.y = size.height;
     CGFloat framebufferScale = view.window.screen.scale ?: UIScreen.mainScreen.scale;
-    io.DisplayFramebufferScale = ImVec2(framebufferScale, framebufferScale);
+    io.DisplayFramebufferScale = ImVec2(framebufferScale, framebufferScale);*/
+#endif
 }
     
 @end

@@ -25,17 +25,41 @@
 		33C6077B20F7A0E000E7639D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C6077A20F7A0E000E7639D /* QuartzCore.framework */; };
 		33C6077F20F7A0EB00E7639D /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C6077C20F7A0EB00E7639D /* main.mm */; };
 		33C6078020F7A0EB00E7639D /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C6077E20F7A0EB00E7639D /* AppDelegate.mm */; };
-		33C6078320F7A12200E7639D /* GameViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C6078120F7A12200E7639D /* GameViewController.mm */; };
 		33C6078520F7A1AF00E7639D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C6078420F7A1AF00E7639D /* UIKit.framework */; };
 		33E6EAC820FD2CC200B5595F /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E6EAC720FD2CC100B5595F /* imgui_impl_metal.mm */; };
+		8A09727321F670F400B66D76 /* GameViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C6078120F7A12200E7639D /* GameViewController.mm */; };
+		8A09727421F670FA00B66D76 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C6077E20F7A0EB00E7639D /* AppDelegate.mm */; };
+		8A09727521F670FD00B66D76 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C6077C20F7A0EB00E7639D /* main.mm */; };
+		8A09727721F6711600B66D76 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A09727621F6711600B66D76 /* Metal.framework */; };
+		8A09727921F6711B00B66D76 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A09727821F6711B00B66D76 /* MetalKit.framework */; };
+		8A09727B21F6726400B66D76 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A09727A21F6726400B66D76 /* AppKit.framework */; };
+		8A09727C21F6754400B66D76 /* GameViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C6078120F7A12200E7639D /* GameViewController.mm */; };
+		8A09727D21F676D100B66D76 /* SceneLighting.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3AD8220FD37FB0067DB8D /* SceneLighting.mm */; };
+		8A09727E21F676D500B66D76 /* PositionNormalVertexFormat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 330D623820FBB135003C8F42 /* PositionNormalVertexFormat.mm */; };
+		8A09727F21F676DA00B66D76 /* Mesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 330D622F20FA18B1003C8F42 /* Mesh.mm */; };
+		8A09728021F676DD00B66D76 /* ObjMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 330D622E20FA18B1003C8F42 /* ObjMesh.mm */; };
+		8A09728121F676DF00B66D76 /* ObjModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 331C5E7D20F8E6E90020A981 /* ObjModel.mm */; };
+		8A09728221F676E200B66D76 /* ObjGroup.mm in Sources */ = {isa = PBXBuildFile; fileRef = 331C5E7E20F8E6E90020A981 /* ObjGroup.mm */; };
+		8A09728321F676E400B66D76 /* MathUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 332C260620F7E74900DA784D /* MathUtils.mm */; };
+		8A09728421F676E700B66D76 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 332C260420F7E6DF00DA784D /* Shaders.metal */; };
+		8A09728521F676EA00B66D76 /* Renderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 332C25FC20F7DA3000DA784D /* Renderer.mm */; };
+		8A09728621F676F100B66D76 /* bv2_goz.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A34CAA621065C1E005D45D6 /* bv2_goz.png */; };
+		8A09728721F676F400B66D76 /* bv2.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 8A34CAA521065C1E005D45D6 /* bv2.mtl */; };
+		8A09728821F676FA00B66D76 /* monkey.obj in Resources */ = {isa = PBXBuildFile; fileRef = 330D623520FA5208003C8F42 /* monkey.obj */; };
+		8A09728921F676FC00B66D76 /* teapot.obj in Resources */ = {isa = PBXBuildFile; fileRef = 330D623320FA1947003C8F42 /* teapot.obj */; };
+		8A09728A21F6770100B66D76 /* bv2.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8A34CAA721065C1E005D45D6 /* bv2.obj */; };
+		8A09728C21F6781A00B66D76 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A09728B21F6781A00B66D76 /* QuartzCore.framework */; };
+		8A135B6821F66EC80045F157 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A135B6621F66EC80045F157 /* Main.storyboard */; };
+		8A135B6921F66EC80045F157 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A135B6721F66EC80045F157 /* Assets.xcassets */; };
 		8A34CAA821065C1E005D45D6 /* bv2.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 8A34CAA521065C1E005D45D6 /* bv2.mtl */; };
 		8A34CAA921065C1E005D45D6 /* bv2_goz.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A34CAA621065C1E005D45D6 /* bv2_goz.png */; };
 		8A34CAAA21065C1E005D45D6 /* bv2.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8A34CAA721065C1E005D45D6 /* bv2.obj */; };
+		8A34CAAD2106743F005D45D6 /* Image.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A34CAAB2106743F005D45D6 /* Image.mm */; };
 		8A71A0AF20FFD1770001044B /* SceneTexturing.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A71A0AD20FFD1770001044B /* SceneTexturing.mm */; };
-		8A781B4620F7B45C0077E3E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A781B4420F7B45C0077E3E9 /* Main.storyboard */; };
-		8A781B4720F7B45C0077E3E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A781B4520F7B45C0077E3E9 /* LaunchScreen.storyboard */; };
-		8A781B4920F7B9500077E3E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A781B4820F7B9500077E3E9 /* Images.xcassets */; };
 		8AA3AD8320FD37FB0067DB8D /* SceneLighting.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3AD8220FD37FB0067DB8D /* SceneLighting.mm */; };
+		8ACAA52D21F66C7F004FEBC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ACAA52A21F66C7E004FEBC4 /* Main.storyboard */; };
+		8ACAA52E21F66C7F004FEBC4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ACAA52B21F66C7F004FEBC4 /* Images.xcassets */; };
+		8ACAA52F21F66C7F004FEBC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ACAA52C21F66C7F004FEBC4 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,8 +90,7 @@
 		3360ED0A20FD032C007BBBD4 /* imgui_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_internal.h; sourceTree = "<group>"; };
 		3360ED0B20FD032C007BBBD4 /* imgui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui.cpp; sourceTree = "<group>"; };
 		3360ED0C20FD032D007BBBD4 /* imgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui.h; sourceTree = "<group>"; };
-		3397991120F79D94006A2E39 /* tinymetal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tinymetal.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		33C6076320F7A03B00E7639D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3397991120F79D94006A2E39 /* tinymetal-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tinymetal-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C6077620F7A0CB00E7639D /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		33C6077820F7A0CF00E7639D /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		33C6077A20F7A0E000E7639D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -79,17 +102,29 @@
 		33C6078420F7A1AF00E7639D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		33E6EAC620FD2CC100B5595F /* imgui_impl_metal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_impl_metal.h; sourceTree = "<group>"; };
 		33E6EAC720FD2CC100B5595F /* imgui_impl_metal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = imgui_impl_metal.mm; sourceTree = "<group>"; };
+		8A09727621F6711600B66D76 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Metal.framework; sourceTree = DEVELOPER_DIR; };
+		8A09727821F6711B00B66D76 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/MetalKit.framework; sourceTree = DEVELOPER_DIR; };
+		8A09727A21F6726400B66D76 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
+		8A09728B21F6781A00B66D76 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		8A135B4F21F66DBF0045F157 /* tinymetal-macos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tinymetal-macos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A135B6521F66EC80045F157 /* tinymetal_macos.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = tinymetal_macos.entitlements; path = macos/tinymetal_macos.entitlements; sourceTree = "<group>"; };
+		8A135B6621F66EC80045F157 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = macos/Main.storyboard; sourceTree = "<group>"; };
+		8A135B6721F66EC80045F157 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = macos/Assets.xcassets; sourceTree = "<group>"; };
+		8A135B6A21F66ED20045F157 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = macos/Info.plist; sourceTree = "<group>"; };
 		8A34CAA521065C1E005D45D6 /* bv2.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bv2.mtl; sourceTree = "<group>"; };
 		8A34CAA621065C1E005D45D6 /* bv2_goz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bv2_goz.png; sourceTree = "<group>"; };
 		8A34CAA721065C1E005D45D6 /* bv2.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bv2.obj; sourceTree = "<group>"; };
+		8A34CAAB2106743F005D45D6 /* Image.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Image.mm; sourceTree = "<group>"; };
+		8A34CAAC2106743F005D45D6 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
 		8A71A0AD20FFD1770001044B /* SceneTexturing.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SceneTexturing.mm; sourceTree = "<group>"; };
 		8A71A0AE20FFD1770001044B /* SceneTexturing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneTexturing.h; sourceTree = "<group>"; };
-		8A781B4420F7B45C0077E3E9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		8A781B4520F7B45C0077E3E9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8A781B4820F7B9500077E3E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8AA3AD8020FD37DE0067DB8D /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		8AA3AD8120FD37FB0067DB8D /* SceneLighting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneLighting.h; sourceTree = "<group>"; };
 		8AA3AD8220FD37FB0067DB8D /* SceneLighting.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SceneLighting.mm; sourceTree = "<group>"; };
+		8ACAA52A21F66C7E004FEBC4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ios/Main.storyboard; sourceTree = "<group>"; };
+		8ACAA52B21F66C7F004FEBC4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ios/Images.xcassets; sourceTree = "<group>"; };
+		8ACAA52C21F66C7F004FEBC4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ios/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8ACAA53021F66C88004FEBC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ios/Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +136,17 @@
 				33C6077B20F7A0E000E7639D /* QuartzCore.framework in Frameworks */,
 				33C6077920F7A0CF00E7639D /* Metal.framework in Frameworks */,
 				33C6077720F7A0CB00E7639D /* MetalKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A135B4C21F66DBF0045F157 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A09728C21F6781A00B66D76 /* QuartzCore.framework in Frameworks */,
+				8A09727B21F6726400B66D76 /* AppKit.framework in Frameworks */,
+				8A09727921F6711B00B66D76 /* MetalKit.framework in Frameworks */,
+				8A09727721F6711600B66D76 /* Metal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +205,8 @@
 		3397991220F79D94006A2E39 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3397991120F79D94006A2E39 /* tinymetal.app */,
+				3397991120F79D94006A2E39 /* tinymetal-ios.app */,
+				8A135B4F21F66DBF0045F157 /* tinymetal-macos.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,10 +214,8 @@
 		33C6076020F79F6900E7639D /* System */ = {
 			isa = PBXGroup;
 			children = (
-				8A781B4820F7B9500077E3E9 /* Images.xcassets */,
-				8A781B4520F7B45C0077E3E9 /* LaunchScreen.storyboard */,
-				8A781B4420F7B45C0077E3E9 /* Main.storyboard */,
-				33C6076320F7A03B00E7639D /* Info.plist */,
+				8A135B6421F66DF50045F157 /* macos */,
+				8A135B6321F66DEF0045F157 /* ios */,
 			);
 			name = System;
 			sourceTree = "<group>";
@@ -190,6 +235,8 @@
 				330D623720FBB135003C8F42 /* PositionNormalVertexFormat.h */,
 				330D623820FBB135003C8F42 /* PositionNormalVertexFormat.mm */,
 				330D623920FBB135003C8F42 /* VertexFormat.h */,
+				8A34CAAC2106743F005D45D6 /* Image.h */,
+				8A34CAAB2106743F005D45D6 /* Image.mm */,
 				330D623020FA18B1003C8F42 /* Mesh.h */,
 				330D622F20FA18B1003C8F42 /* Mesh.mm */,
 				330D622920FA14BF003C8F42 /* ObjMesh.h */,
@@ -216,6 +263,10 @@
 		33C6077520F7A0CA00E7639D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A09728B21F6781A00B66D76 /* QuartzCore.framework */,
+				8A09727A21F6726400B66D76 /* AppKit.framework */,
+				8A09727821F6711B00B66D76 /* MetalKit.framework */,
+				8A09727621F6711600B66D76 /* Metal.framework */,
 				33C6078420F7A1AF00E7639D /* UIKit.framework */,
 				33C6077A20F7A0E000E7639D /* QuartzCore.framework */,
 				33C6077820F7A0CF00E7639D /* Metal.framework */,
@@ -224,12 +275,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8A135B6321F66DEF0045F157 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				8ACAA53021F66C88004FEBC4 /* Info.plist */,
+				8ACAA52B21F66C7F004FEBC4 /* Images.xcassets */,
+				8ACAA52C21F66C7F004FEBC4 /* LaunchScreen.storyboard */,
+				8ACAA52A21F66C7E004FEBC4 /* Main.storyboard */,
+			);
+			name = ios;
+			sourceTree = "<group>";
+		};
+		8A135B6421F66DF50045F157 /* macos */ = {
+			isa = PBXGroup;
+			children = (
+				8A135B6A21F66ED20045F157 /* Info.plist */,
+				8A135B6721F66EC80045F157 /* Assets.xcassets */,
+				8A135B6621F66EC80045F157 /* Main.storyboard */,
+				8A135B6521F66EC80045F157 /* tinymetal_macos.entitlements */,
+			);
+			name = macos;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3397991020F79D94006A2E39 /* tinymetal */ = {
+		3397991020F79D94006A2E39 /* tinymetal-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3397992720F79D96006A2E39 /* Build configuration list for PBXNativeTarget "tinymetal" */;
+			buildConfigurationList = 3397992720F79D96006A2E39 /* Build configuration list for PBXNativeTarget "tinymetal-ios" */;
 			buildPhases = (
 				3397990D20F79D94006A2E39 /* Sources */,
 				3397990E20F79D94006A2E39 /* Frameworks */,
@@ -239,9 +312,26 @@
 			);
 			dependencies = (
 			);
-			name = tinymetal;
+			name = "tinymetal-ios";
 			productName = tinymetal;
-			productReference = 3397991120F79D94006A2E39 /* tinymetal.app */;
+			productReference = 3397991120F79D94006A2E39 /* tinymetal-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8A135B4E21F66DBF0045F157 /* tinymetal-macos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A135B6221F66DC00045F157 /* Build configuration list for PBXNativeTarget "tinymetal-macos" */;
+			buildPhases = (
+				8A135B4B21F66DBF0045F157 /* Sources */,
+				8A135B4C21F66DBF0045F157 /* Frameworks */,
+				8A135B4D21F66DBF0045F157 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "tinymetal-macos";
+			productName = "tinymetal-macos";
+			productReference = 8A135B4F21F66DBF0045F157 /* tinymetal-macos.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -254,6 +344,9 @@
 				TargetAttributes = {
 					3397991020F79D94006A2E39 = {
 						CreatedOnToolsVersion = 9.4;
+					};
+					8A135B4E21F66DBF0045F157 = {
+						CreatedOnToolsVersion = 10.0;
 					};
 				};
 			};
@@ -270,7 +363,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3397991020F79D94006A2E39 /* tinymetal */,
+				3397991020F79D94006A2E39 /* tinymetal-ios */,
+				8A135B4E21F66DBF0045F157 /* tinymetal-macos */,
 			);
 		};
 /* End PBXProject section */
@@ -281,13 +375,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A34CAA821065C1E005D45D6 /* bv2.mtl in Resources */,
+				8ACAA52F21F66C7F004FEBC4 /* LaunchScreen.storyboard in Resources */,
 				8A34CAA921065C1E005D45D6 /* bv2_goz.png in Resources */,
+				8ACAA52E21F66C7F004FEBC4 /* Images.xcassets in Resources */,
 				8A34CAAA21065C1E005D45D6 /* bv2.obj in Resources */,
+				8ACAA52D21F66C7F004FEBC4 /* Main.storyboard in Resources */,
 				330D623420FA1947003C8F42 /* teapot.obj in Resources */,
-				8A781B4920F7B9500077E3E9 /* Images.xcassets in Resources */,
 				330D623620FA5209003C8F42 /* monkey.obj in Resources */,
-				8A781B4620F7B45C0077E3E9 /* Main.storyboard in Resources */,
-				8A781B4720F7B45C0077E3E9 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A135B4D21F66DBF0045F157 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A09728721F676F400B66D76 /* bv2.mtl in Resources */,
+				8A09728621F676F100B66D76 /* bv2_goz.png in Resources */,
+				8A09728921F676FC00B66D76 /* teapot.obj in Resources */,
+				8A09728821F676FA00B66D76 /* monkey.obj in Resources */,
+				8A09728A21F6770100B66D76 /* bv2.obj in Resources */,
+				8A135B6921F66EC80045F157 /* Assets.xcassets in Resources */,
+				8A135B6821F66EC80045F157 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,8 +409,10 @@
 				33C6078020F7A0EB00E7639D /* AppDelegate.mm in Sources */,
 				33E6EAC820FD2CC200B5595F /* imgui_impl_metal.mm in Sources */,
 				331C5E7F20F8E6E90020A981 /* ObjModel.mm in Sources */,
+				8A34CAAD2106743F005D45D6 /* Image.mm in Sources */,
 				330D623220FA18B1003C8F42 /* Mesh.mm in Sources */,
 				3360ED0E20FD032D007BBBD4 /* imgui_demo.cpp in Sources */,
+				8A09727C21F6754400B66D76 /* GameViewController.mm in Sources */,
 				3360ED0D20FD032D007BBBD4 /* imgui_draw.cpp in Sources */,
 				3360ED0F20FD032D007BBBD4 /* imgui.cpp in Sources */,
 				332C260520F7E6DF00DA784D /* Shaders.metal in Sources */,
@@ -312,9 +422,27 @@
 				332C25FE20F7DA3000DA784D /* Renderer.mm in Sources */,
 				8A71A0AF20FFD1770001044B /* SceneTexturing.mm in Sources */,
 				8AA3AD8320FD37FB0067DB8D /* SceneLighting.mm in Sources */,
-				33C6078320F7A12200E7639D /* GameViewController.mm in Sources */,
 				330D623A20FBB135003C8F42 /* PositionNormalVertexFormat.mm in Sources */,
 				332C260820F7E74900DA784D /* MathUtils.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A135B4B21F66DBF0045F157 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A09727F21F676DA00B66D76 /* Mesh.mm in Sources */,
+				8A09728021F676DD00B66D76 /* ObjMesh.mm in Sources */,
+				8A09727D21F676D100B66D76 /* SceneLighting.mm in Sources */,
+				8A09727E21F676D500B66D76 /* PositionNormalVertexFormat.mm in Sources */,
+				8A09727521F670FD00B66D76 /* main.mm in Sources */,
+				8A09727421F670FA00B66D76 /* AppDelegate.mm in Sources */,
+				8A09728221F676E200B66D76 /* ObjGroup.mm in Sources */,
+				8A09727321F670F400B66D76 /* GameViewController.mm in Sources */,
+				8A09728421F676E700B66D76 /* Shaders.metal in Sources */,
+				8A09728121F676DF00B66D76 /* ObjModel.mm in Sources */,
+				8A09728521F676EA00B66D76 /* Renderer.mm in Sources */,
+				8A09728321F676E400B66D76 /* MathUtils.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +565,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 678TP86R4P;
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../lib/imgui/",
+					"$(SRCROOT)/../lib/stb/",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,7 +587,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 678TP86R4P;
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../lib/imgui/",
+					"$(SRCROOT)/../lib/stb/",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -464,6 +600,51 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dot.woot.tinymetal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8A135B6021F66DC00045F157 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/macos/tinymetal_macos.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 678TP86R4P;
+				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "dot.woot.tinymetal-macos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8A135B6121F66DC00045F157 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/macos/tinymetal_macos.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 678TP86R4P;
+				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "dot.woot.tinymetal-macos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -479,11 +660,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3397992720F79D96006A2E39 /* Build configuration list for PBXNativeTarget "tinymetal" */ = {
+		3397992720F79D96006A2E39 /* Build configuration list for PBXNativeTarget "tinymetal-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3397992820F79D96006A2E39 /* Debug */,
 				3397992920F79D96006A2E39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A135B6221F66DC00045F157 /* Build configuration list for PBXNativeTarget "tinymetal-macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A135B6021F66DC00045F157 /* Debug */,
+				8A135B6121F66DC00045F157 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
